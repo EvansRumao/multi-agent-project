@@ -1,0 +1,13 @@
+from langchain.agents import create_agent
+from langchain_mistralai import MistralAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from tools import web_search , scrape_url 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+llm=MistralAI(model="mistral-small-latest", temperature=0.7)
+
+
+
